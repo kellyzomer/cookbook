@@ -1,13 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
     background-color: #f5f5f5;
-    color: #d1663f;
+    font-family: Vollkorn;
+    font-size: 18px;
+    color: #807f7e;
     margin: auto;
     padding: 1.4rem;
     letter-spacing: .06rem;
-    word-spacing: 0.4rem;
+    word-spacing: 0.1rem;
     line-height: 1.6;
     max-width: 38rem;
 }
@@ -18,20 +19,39 @@ header {
     gap: 30px;
 }
 
+nav {
+    padding: 2px;
+}
+
+nav a {
+    color: #d1663f
+}
+
 h1 {
     padding-top: 30px;
+    padding-bottom: 10px;
     font-family: 'Unica One', cursive;
+    color: #d1663f;
     font-size: 60px;
-    margin-bottom: 15px;
+    margin-bottom: 30px;
     line-height: 45px;
     text-align: left;
 }
 
 h2 {
     padding-top: 5px;
+    padding-bottom: 0px;
     font-size: 25px;
-    font-weight: 300;
-    margin-bottom: 15px;
+    font-weight: 500;
+    margin-bottom: 0px;
     line-height: 45px;
     text-align: left;
 }
+
+h3 {
+    padding-top: 15px;
+    margin: 0px;
+    font-size: 18px;
+}
+
+
