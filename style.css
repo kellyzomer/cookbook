@@ -24,7 +24,9 @@ nav {
 }
 
 nav a {
-    color: #d1663f
+    color: #d1663f;
+    text-decoration: none;
+    line-height: 30px;
 }
 
 h1 {
@@ -52,6 +54,16 @@ h3 {
     padding-top: 15px;
     margin: 0px;
     font-size: 18px;
+}
+
+li a {
+    text-decoration: none;
+    list-style-type: none;
+    color: #807f7e;
+}
+
+li a:hover {
+    color:#d1663f;
 }
 
 

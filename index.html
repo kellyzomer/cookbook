@@ -1,12 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+ <title>Koken met Kell</title>
    <body>
+
+      <input type="button" id="btnSearch" value="Random recept" onclick="GetValue();" />
+      <p id="recept" >Random recept</p>
+
+<script>
+
+function GetValue()
+{
+    var recept = Array("Bloemkool taco's", "Broccoli bowl met zalm en avocado", "Gnocchi met cherrytomaten en mozzarella");
+    var random = recept[Math.floor(Math.random() * recept.length)];
+    // alert(random);
+    document.getElementById("recept").innerHTML=random;
+}
+
+</script>
+
       <p>Wat eten we vandaag?</p>
-         <nav>
-         <a href="/bloemkool-taco/" title="Bloemkool taco's">Bloemkool taco's</a>
-         <a href="/broccoli-zalm-avo/" title="Broccoli bowl met zalm en avocado">Broccoli bowl met zalm en avocado</a>
-         <a href="/gnocchi-tomaat-mozzarella/" title="Gnocchi met cherrytomaten en mozzarella">Gnocchi met cherrytomaten en mozzarella</a>
-         </nav>
+         <ul>
+         <li><a href="/bloemkool-taco/" title="Bloemkool taco's">Bloemkool taco's</a></li>
+         <li><a href="/broccoli-zalm-avo/" title="Broccoli bowl met zalm en avocado">Broccoli bowl met zalm en avocado</a></li>
+         <li><a href="/gnocchi-tomaat-mozzarella/" title="Gnocchi met cherrytomaten en mozzarella">Gnocchi met cherrytomaten en mozzarella</a></li>
+         </ul>
    </body>
    <script src="/header.js" defer></script>
 </html>
