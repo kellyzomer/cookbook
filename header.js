@@ -1,7 +1,7 @@
 const template = document.createElement('template');
 template.innerHTML=`
   <head>
-    <meta name="description" content="Koken met Kell">
+    <meta name="description" content="Koken met Kell: wat eten we vandaag?">
       <meta name="author" content="Kelly Zomer">
       <meta name="robots" content="index, follow">
       <link rel="stylesheet" href="/style.css">

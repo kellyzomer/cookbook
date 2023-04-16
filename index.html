@@ -1,32 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
- <title>Koken met Kell</title>
+<html lang="nl">
+   <head>
+      <title>Koken met Kell</title>
+   </head>
    <body>
-
-<div>
-      <input type="button" class="button" id="buttonRecept" value="Wat eten we vandaag?" onclick="GetValue();" />
-      <p id="recept" ></p>
-
-
-<script>
-function GetValue()
-{
-    var recept = Array("Bloemkool taco's", "Broccoli bowl met zalm en avocado", "Gnocchi met cherrytomaten en mozzarella", "Pasta met feta en ovengroenten");
-    var random = recept[Math.floor(Math.random() * recept.length)];
-    // alert(random);
-    document.getElementById("recept").innerHTML=random;
-}
-</script>
-</div>
-
-
-         <ul>
-         <li><a href="/bloemkool-taco/" title="Bloemkool taco's">Bloemkool taco's</a></li>
-         <li><a href="/broccoli-zalm-avo/" title="Broccoli bowl met zalm en avocado">Broccoli bowl met zalm en avocado</a></li>
-         <li><a href="/gnocchi-tomaat-mozzarella/" title="Gnocchi met cherrytomaten en mozzarella">Gnocchi met cherrytomaten en mozzarella</a></li>
-         <li><a href="/pasta-oven-feta/" title="Pasta met feta en ovengroenten">Pasta met feta en ovengroenten</a></li>
-         </ul>
+      <div class="intro">
+        <p>WORK IN PROGRESS: Veel recepten moeten nog gevuld worden</p>
+         <p>Op deze website staan recepten die ik vaak eet en vaak kook. De meeste recepten zijn vegetarisch en sommigen pescetarisch :). Mocht je niet weten wat je moet koken, kun je het de onderstaande button voor je laten bepalen!</p>
+      </div>
+      <div class="aroundBtn">
+         <input type="button" class="button" id="buttonRecept" value="Wat eten we vandaag?" onclick="GetValue();" />
+         <p id="recept" ></p>
+         <script>
+            function GetValue()
+            {
+                var recept = Array("Aardbei manchego salade","Aubergine curry met bloemkoolrijst","Avocado carbonara","Bloemkool taco's", "Broccoli bowl met zalm en avocado","Chili sin carne","Courgetti pasta met zalm","Couscous met feta en groenten","Curry met mango en zoete aardappel","Dahl curry met spinazie","Fajita vega","Fried rice","Gado gado","Gegrilde aubergine","Gnocchi met cherrytomaten en mozzarella","Halloumi burger","Massaman curry","Noedels met broccoli en champignons","Orzo met garnalen, venkel en feta","Pad thai","Pasta met artisjok en doperwten","Pasta met feta en ovengroenten","Pita falafel","Pita vega shoarma","Plaattaart pompoen","Poke bowl","Portobello pasta","Portobello wellington","Rijst met zalm teriyaki","Risotto met bloemkool en broccoli","Risotto met paddenstoelen","Risotto met pompoen en champignons","Shakshuka","Soba noodles met mango en tofu","Springrolls","Traybake gnocchi met vega spekjes","Trufel gnocchi","Vega kipschnitzel wrap","Verse pasta variatie","Zoete aardappelsalade met feta");
+                var random = recept[Math.floor(Math.random() * recept.length)];
+                // alert(random);
+                document.getElementById("recept").innerHTML=random;
+            }
+         </script>
+      </div>
+      <ul>
+         <li><a href="recepten/aardbei-manchego-salade/" title="Aardbei manchego salade">Aardbei manchego salade</a></li>
+         <li><a href="recepten/aubergine-curry-bloemkoolrijst/" title="Aubergine curry met bloemkoolrijst">Aubergine curry met bloemkoolrijst</a></li>
+         <li><a href="recepten/avocado-carbonara/" title="Avocado carbonara">Avocado carbonara</a></li>
+         <li><a href="recepten/bloemkool-taco/" title="Bloemkool taco's">Bloemkool taco's</a></li>
+         <li><a href="recepten/broccoli-zalm-avo/" title="Broccoli bowl met zalm en avocado">Broccoli bowl met zalm en avocado</a></li>
+         <li><a href="recepten/chili-sin-carne/" title="Chili sin carne">Chili sin carne</a></li>
+         <li><a href="recepten/courgetti-pasta-zalm/" title="Courgetti pasta met zalm">Courgetti pasta met zalm</a></li>
+         <li><a href="recepten/couscous-feta/" title="Couscous met feta en groenten">Couscous met feta en groenten</a></li>
+         <li><a href="recepten/curry-mango-zoete-aardappel/" title="Curry met mango en zoete aardappel">Curry met mango en zoete aardappel</a></li>
+         <li><a href="recepten/dahl-curry/" title="Dahl curry met spinazie">Dahl curry met spinazie</a></li>
+         <li><a href="recepten/fajita-vega/" title="Fajita vega">Vega fajita</a></li>
+         <li><a href="recepten/fried-rice/" title="Fried rice">Fried rice</a></li>
+         <li><a href="recepten/gado-gado/" title="Gado gado">Gado gado</a></li>
+         <li><a href="recepten/gegrilde-aubergine/" title="Gegrilde aubergine">Gegrilde aubergine</a></li>
+         <li><a href="recepten/gnocchi-tomaat-mozzarella/" title="Gnocchi met cherrytomaten en mozzarella">Gnocchi met cherrytomaten en mozzarella</a></li>
+         <li><a href="recepten/halloumi-burger/" title="Halloumi burger">Halloumi burger</a></li>
+         <li><a href="recepten/massaman-curry/" title="Massaman curry">Massaman curry</a></li>
+         <li><a href="recepten/noedels-broccoli-champignons/" title="Noedels met broccoli en champignons">Noedels met broccoli en champignons</a></li>
+         <li><a href="recepten/orzo-garnalen-feta/" title="Orzo met garnalen, venkel en feta">Orzo met garnalen, venkel en feta</a></li>
+         <li><a href="recepten/pad-thai/" title="Pad thai">Pad thai</a></li>
+         <li><a href="recepten/pasta-artisjok-doperwten/" title="Pasta met artisjok en doperwten">Pasta met artisjok en doperwten</a></li>
+         <li><a href="recepten/pasta-oven-feta/" title="Pasta met feta en ovengroenten">Pasta met feta en ovengroenten</a></li>
+         <li><a href="recepten/pita-falafel/" title="Pita falafel">Pita falafel</a></li>
+         <li><a href="recepten/pita-vega-shoarma/" title="Pita vega shoarma">Pita vega shoarma</a></li>
+         <li><a href="recepten/plaattaart-pompoen/" title="Plaattaart pompoen">Plaattaart pompoen</a></li>
+         <li><a href="recepten/poke-bowl/" title="Poke bowl">Poke bowl</a></li>
+         <li><a href="recepten/portobello-pasta/" title="Portobello pasta">Portobello pasta</a></li>
+         <li><a href="recepten/portobello-wellington/" title="Portobello wellington">Portobello wellington</a></li>
+         <li><a href="recepten/rijst-zalm-teriyaki/" title="Rijst met zalm teriyaki">Rijst met zalm teriyaki</a></li>
+         <li><a href="recepten/risotto-bloemkool-broccoli/" title="Risotto met bloemkool en broccoli">Risotto met bloemkool en broccoli</a></li>
+         <li><a href="recepten/risotto-paddenstoelen/" title="Risotto met paddenstoelen">Risotto met paddenstoelen</a></li>
+         <li><a href="recepten/risotto-pompoen-champignons/" title="Risotto met pompoen en champignons">Risotto met pompoen en champignons</a></li>
+         <li><a href="recepten/shakshuka/" title="Shakshuka">Shakshuka</a></li>
+         <li><a href="recepten/soba-noodles-mango-tofu/" title="Soba noodles met mango en tofu">Soba noodles met mango en tofu</a></li>
+         <li><a href="recepten/springrolls/" title="Springrolls">Springrolls</a></li>
+         <li><a href="recepten/traybake-gnocchi-vega-spekjes/" title="Traybake gnocchi met vega spekjes">Traybake gnocchi met vega spekjess</a></li>
+         <li><a href="recepten/truffel-gnocchi/" title="Truffel gnocchi">Truffel gnocchi</a></li>
+         <li><a href="recepten/vega-kipschnitzel-wrap/" title="Vega kipschnitzel wrap">Vega kipschnitzel wrap</a></li>
+         <li><a href="recepten/verse-pasta-ah/" title="Verse pasta variatie">Verse pasta variatie</a></li>
+         <li><a href="recepten/zoete-aardappel-feta-salade/" title="Zoete aardappelsalade met feta">Zoete aardappelsalade met feta</a></li>
+      </ul>
    </body>
    <script src="/header.js" defer></script>
 </html>
   
+
