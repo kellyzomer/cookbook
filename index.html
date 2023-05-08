@@ -10,17 +10,60 @@
       </div>
       <div class="aroundBtn">
          <input type="button" class="button" id="buttonRecept" value="Wat eten we vandaag?" onclick="GetValue();" />
-         <p id="recept" ></p>
+         <div class="outcomebox">
+         <p id="recept" class="outcome"></p>
+         </div>
          <script>
             function GetValue()
             {
-                var recept = Array("Aardbei manchego salade","Aubergine curry met bloemkoolrijst","Avocado carbonara","Bloemkool taco's", "Broccoli bowl met zalm en avocado","Chili sin carne","Courgetti pasta met zalm","Couscous met feta en groenten","Curry met mango en zoete aardappel","Dahl curry met spinazie","Fajita bowl vega","Fried rice","Gado gado","Gegrilde aubergine","Gnocchi met cherrytomaten en mozzarella","Halloumi burger","Massaman curry","Noedels met broccoli en champignons","Orzo met garnalen, venkel en feta","Pad thai","Pasta met artisjok en doperwten","Pasta met feta en ovengroenten","Pita falafel","Pita vega shoarma","Plaattaart pompoen","Poke bowl","Portobello pasta","Portobello wellington","Rijst met zalm teriyaki","Risotto met bloemkool en broccoli","Risotto met paddenstoelen","Risotto met pompoen en champignons","Shakshuka","Soba noodles met mango en tofu","Springrolls","Traybake gnocchi met vega spekjes","Trufel gnocchi","Vega kipschnitzel wrap","Verse pasta variatie","Zoete aardappelsalade met feta");
+                var recept = Array(
+                  "<a href='recepten/aardbei-manchego-salade/'>Aardbei manchego salade</a>",
+                  "<a href='recepten/aubergine-curry-bloemkoolrijst/'>Aubergine curry met bloemkoolrijst</a>",
+                  "<a href='recepten/avocado-carbonara/'>Avocado carbonara</a>",
+                  "<a href='recepten/bloemkool-taco/'>Bloemkool taco's</a>", 
+                  "<a href='recepten/broccoli-zalm-avo/'>Broccoli bowl met zalm en avocado</a>",
+                  "<a href='recepten/chili-sin-carne/'>Chili sin carne</a>",
+                  "<a href='recepten/courgetti-pasta-zalm/'>Courgetti pasta met zalm</a>",
+                  "<a href='recepten/couscous-feta/'>Couscous met feta en groenten",
+                  "<a href='recepten/curry-mango-zoete-aardappel/'>Curry met mango en zoete aardappel</a>",
+                  "<a href='recepten/dahl-curry/'>Dahl curry met spinazie</a>",
+                  "<a href='recepten/fajita-vega/'>Fajita bowl vega</a>",
+                  "<a href='recepten/fried-rice/'>Fried rice</a>",
+                  "<a href='recepten/gado-gado/'>Gado gado</a>",
+                  "<a href='recepten/gegrilde-aubergine/'>Gegrilde aubergine</a>",
+                  "<a href='recepten/gnocchi-tomaat-mozzarella/'>Gnocchi met cherrytomaten en mozzarella</a>",
+                  "<a href='recepten/halloumi-burger/'>Halloumi burger</a>",
+                  "<a href='recepten/massaman-curry/'>Massaman curry</a>",
+                  "<a href='recepten/noedels-broccoli-champignons/'>Noedels met broccoli en champignons</a>",
+                  "<a href='recepten/orzo-garnalen-feta/'>Orzo met garnalen, venkel en feta</a>",
+                  "<a href='recepten/pad-thai/'>Pad thai</a>",
+                  "<a href='recepten/pasta-artisjok-doperwten/'>Pasta met artisjok en doperwten</a>",
+                  "<a href='recepten/pasta-oven-feta/'>Pasta met feta en ovengroenten</a>",
+                  "<a href='recepten/pita-falafel/'>Pita falafel</a>",
+                  "<a href='recepten/pita-vega-shoarma/'>Pita vega shoarma</a>",
+                  "<a href='recepten/plaattaart-pompoen/'>Plaattaart pompoen</a>",
+                  "<a href='recepten/poke-bowl/'>Poke bowl</a>",
+                  "<a href='recepten/portobello-pasta/'>Portobello pasta</a>",
+                  "<a href='recepten/portobello-wellington/'>Portobello wellington</a>",
+                  "<a href='recepten/rijst-zalm-teriyaki/'>Rijst met zalm teriyaki</a>",
+                  "<a href='recepten/risotto-bloemkool-broccoli/'>Risotto met bloemkool en broccoli</a>",
+                  "<a href='recepten/risotto-paddenstoelen/'>Risotto met paddenstoelen</a>",
+                  "<a href='recepten/risotto-pompoen-champignons/'>Risotto met pompoen en champignons</a>",
+                  "<a href='recepten/shakshuka/'>Shakshuka</a>",
+                  "<a href='recepten/soba-noodles-mango-tofu/'>Soba noodles met mango en tofu</a>",
+                  "<a href='recepten/springrolls/'>Springrolls</a>",
+                  "<a href='recepten/traybake-gnocchi-vega-spekjes/'>Traybake gnocchi met vega spekjes</a>",
+                  "<a href='recepten/truffel-gnocchi/'>Truffel gnocchi</a>",
+                  "<a href='recepten/vega-kipschnitzel-wrap/'>Vega kipschnitzel wrap</a>",
+                  "<a href='recepten/verse-pasta-ah/'>Verse pasta variatie</a>",
+                  "<a href='recepten/zoete-aardappel-feta-salade/'>Zoete aardappelsalade met feta</a>");
                 var random = recept[Math.floor(Math.random() * recept.length)];
                 // alert(random);
                 document.getElementById("recept").innerHTML=random;
             }
          </script>
       </div>
+      <p class="kieszelf">Of kies hier zelf je recept:</p>
       <ul>
          <li><a href="recepten/aardbei-manchego-salade/" title="Aardbei manchego salade">Aardbei manchego salade</a></li>
          <li><a href="recepten/aubergine-curry-bloemkoolrijst/" title="Aubergine curry met bloemkoolrijst">Aubergine curry met bloemkoolrijst</a></li>

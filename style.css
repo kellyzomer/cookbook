@@ -83,7 +83,7 @@ li a:hover {
     font-size: 17px;
     line-height: 2;
     display: inline-block;
-    padding: 0 4rem;
+    padding: 0 50px;
     text-align: center;
     text-decoration: none;
     transition: box-shadow .2s ease-in-out;
@@ -92,9 +92,31 @@ li a:hover {
 
 .aroundBtn {
     padding-bottom: 30px;
+    max-width: 100%;
 }
 
+.outcomebox {
+    height: 160px;
+    max-height: 100%;
+    max-width: 100%;
+}
 
+.outcome {
+    font-family: 'Unica One', bold;
+    text-align: center;
+    font-size: 150%;
+    text-decoration: none;
+    color: #807f7e;
+}
 
+.outcome a:link, a:visited {
+    text-decoration: none;
+    color: #807f7e;
+}
+
+.kieszelf {
+    font-weight: bold;
+    text-decoration: underline;
+}
 
 
