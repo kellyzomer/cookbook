@@ -5,18 +5,17 @@
    </head>
    <body>
       <div class="intro">
-        <p>WORK IN PROGRESS: Veel recepten moeten nog gevuld worden</p>
          <p>Op deze website staan recepten die ik vaak eet en vaak kook. De meeste recepten zijn vegetarisch en sommigen pescetarisch :). Mocht je niet weten wat je moet koken, kun je het de onderstaande button voor je laten bepalen!</p>
       </div>
       <div class="aroundBtn">
-         <input type="button" class="button" id="buttonRecept" value="Wat eten we vandaag?" onclick="GetValue();" />
+         <input type="button" class="button" id="buttonRecept" value="Wat eten we vandaag?" onclick="GetValue();"/>
          <div class="outcomebox">
          <p id="recept" class="outcome"></p>
          </div>
          <script>
             function GetValue()
             {
-                var recept = Array(
+                var recipe = Array(
                   "<a href='recepten/aardbei-manchego-salade/'>Aardbei manchego salade</a>",
                   "<a href='recepten/aubergine-curry-bloemkoolrijst/'>Aubergine curry met bloemkoolrijst</a>",
                   "<a href='recepten/avocado-carbonara/'>Avocado carbonara</a>",
@@ -57,7 +56,7 @@
                   "<a href='recepten/vega-kipschnitzel-wrap/'>Vega kipschnitzel wrap</a>",
                   "<a href='recepten/verse-pasta-ah/'>Verse pasta variatie</a>",
                   "<a href='recepten/zoete-aardappel-feta-salade/'>Zoete aardappelsalade met feta</a>");
-                var random = recept[Math.floor(Math.random() * recept.length)];
+                var random = recipe[Math.floor(Math.random() * recipe.length)];
                 // alert(random);
                 document.getElementById("recept").innerHTML=random;
             }
