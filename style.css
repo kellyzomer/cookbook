@@ -1,26 +1,52 @@
-@import url('https://fonts.googleapis.com/css2?family=Unica+One&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Montserrat:wght@400;500;600;700&family=Unica+One&family=Vollkorn:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
-    background-color: #f5f5f5;
-    font-family: Vollkorn;
+    --accent: #5e2a5f;
+    --accent-dark: #42173f;
+    --accent-soft: #f8f1f7;
+    --text: #5f5a5d;
+    --surface: #ffffff;
+    --shadow: rgba(66, 23, 63, 0.14);
+    background-color: #fbf7fa;
+    font-family: 'Montserrat', sans-serif;
     font-size: 18px;
-    color: #807f7e;
+    color: var(--text);
     margin: auto;
     padding: 1.4rem;
     letter-spacing: .06rem;
     word-spacing: 0.1rem;
     line-height: 1.6;
-    max-width: 38rem;
+}
+
+body > *:not(.recipe-slider) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 46rem;
 }
 
 header {
+    align-items: center;
+    display: flex;
     justify-content: space-between;
     flex-direction: column;
-    gap: 30px;
+    margin: 20px 0 34px;
+}
+
+.logo-link {
+    display: inline-block;
+    line-height: 0;
+}
+
+.logo {
+    display: block;
+    filter: brightness(0) saturate(100%) invert(18%) sepia(22%) saturate(1737%) hue-rotate(252deg) brightness(93%) contrast(89%);
+    height: auto;
+    max-width: 180px;
+    width: min(52vw, 180px);
 }
 
 .intro {
-    color: #807f7e;
+    color: var(--text);
     padding-bottom: 20px;
 }
 
@@ -29,7 +55,7 @@ nav {
 }
 
 nav a {
-    color: #d1663f;
+    color: var(--accent);
     text-decoration: none;
     line-height: 30px;
 }
@@ -38,7 +64,7 @@ h1 {
     padding-top: 30px;
     padding-bottom: 10px;
     font-family: 'Unica One', cursive;
-    color: #d1663f;
+    color: var(--accent);
     font-size: 40px;
     margin-bottom: 30px;
     line-height: 45px;
@@ -64,22 +90,23 @@ h3 {
 li a {
     text-decoration: none;
     list-style-type: none;
-    color: #807f7e;
+    color: var(--text);
 }
 
 li a:hover {
-    color:#d1663f;
+    color: var(--accent);
 }
 
 /* button */
 .button {
-    background-color: #f5f5f5;
-    color: #d1663f;
-    font-family: 'Unica One', cursive;
-    letter-spacing: 4px;
-    border: 2px solid #d1663f;
+    background-color: var(--accent-soft);
+    color: var(--accent);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0;
+    border: 2px solid var(--accent);
     border-radius: 30px;
-    box-shadow: #d1663f 4px 4px 0 0;
+    box-shadow: var(--accent) 4px 4px 0 0;
     -webkit-appearance: none;
     font-size: 17px;
     line-height: 2;
@@ -91,8 +118,13 @@ li a:hover {
     touch-action: manipulation;
 }
 
+.button:hover {
+    background-color: var(--surface);
+    box-shadow: var(--accent-dark) 5px 5px 0 0;
+}
+
 .aroundBtn {
-  padding-bottom: 30px;
+  padding-bottom: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -124,28 +156,121 @@ li a:hover {
 
 /* outcome of the button */
 .outcomebox {
-    height: 160px;
+    min-height: 70px;
     max-height: 100%;
     max-width: 100%;
 }
 
 .outcome {
-    font-family: 'Unica One', bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     text-align: center;
     font-size: 150%;
     text-decoration: none;
-    color: #807f7e;
+    color: var(--text);
 }
 
-.outcome a:link, a:visited {
+.outcome a:link, .outcome a:visited {
     text-decoration: none;
-    color: #807f7e;
+    color: var(--accent);
 }
 
 /* misc. styling */
 .kieszelf {
-    font-weight: bold;
-    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--accent-dark);
+    font-size: 22px;
+    letter-spacing: 0;
+    line-height: 1.2;
+    margin: 0;
+    text-decoration: none;
 }
 
+.recipe-slider {
+    margin: 0 auto 40px;
+    max-width: 82rem;
+    padding: 0 1.4rem;
+    width: 100%;
+}
 
+.recipe-slider-header {
+    align-items: center;
+    display: flex;
+    gap: 16px;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+
+.recipe-grid {
+    align-items: stretch;
+    display: grid;
+    gap: 14px;
+    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.recipe-grid li {
+    background-color: var(--surface);
+    border: 1px solid rgba(94, 42, 95, 0.18);
+    border-radius: 8px;
+    box-shadow: 0 10px 24px var(--shadow);
+    display: flex;
+    min-height: 0;
+    overflow: hidden;
+    transition: border-color .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+@media only screen and (min-width: 78rem) {
+    .recipe-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.recipe-grid li:hover {
+    border-color: rgba(94, 42, 95, 0.45);
+    box-shadow: 0 14px 30px rgba(66, 23, 63, 0.2);
+    transform: translateY(-2px);
+}
+
+.recipe-grid a {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--accent-dark);
+    display: grid;
+    flex: 1;
+    font-weight: 600;
+    gap: 12px;
+    grid-template-rows: 72px auto;
+    justify-items: center;
+    line-height: 1.35;
+    min-height: 0;
+    padding: 14px;
+    text-align: center;
+}
+
+.recipe-grid a:hover {
+    color: var(--accent);
+}
+
+.recipe-image {
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    display: block;
+    height: auto !important;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100% !important;
+}
+
+.recipe-title {
+    align-items: center;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    min-height: 72px;
+    padding: 0;
+    width: 100%;
+}

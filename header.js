@@ -10,7 +10,9 @@ template.innerHTML=`
    </head>
    <header>
       <meta charset="utf-8">
-      <h1>Koken met Kell</h1>
+      <a class="logo-link" href="/" aria-label="Koken met Kell">
+         <img class="logo" src="/logo.png" alt="Koken met Kell">
+      </a>
    </header>
 `
 
