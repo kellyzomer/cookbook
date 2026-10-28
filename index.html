@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="nl">
    <head>
-      <title>Koken met Kell</title>
+      <meta charset="utf-8">
+      <title>Koken met Kel</title>
    </head>
    <body>
       <div class="intro">
-         <p>Op deze website staan recepten die ik vaak eet en vaak kook. De meeste recepten zijn vegetarisch en sommigen pescetarisch. Mocht je niet weten wat je moet koken, kun je het de onderstaande button voor je laten bepalen!</p>
+         <p>Recepten die ik graag maak en met plezier op tafel zet. Vooral veel vegetarisch en soms met&nbsp;vis.</p>
       </div>
+      <section class="about-card" aria-label="Over Koken met Kel">
+         <div class="about-photo-wrap">
+            <img class="about-photo" src="/assets/homepage-kel.jpg" alt="Kel aan tafel op een terras">
+            <span class="photo-note" role="img" aria-label="Met liefde gekookt">
+               <svg viewBox="0 0 100 92" aria-hidden="true" focusable="false"><path d="M50 88C43 82 7 57 4 36 1 19 12 7 28 7c11 0 18 6 22 17 4-11 11-17 22-17 16 0 27 12 24 29-3 21-39 46-46 52Z"/></svg>
+               <span class="photo-note-label" aria-hidden="true">met liefde<br>gekookt</span>
+            </span>
+         </div>
+         <div class="about-copy">
+            <h2>Een beetje inspiratie<br>voor elke dag</h2>
+         </div>
+      </section>
       <div class="aroundBtn">
          <input type="button" class="button" id="buttonRecept" value="Wat eten we vandaag?" onclick="GetValue();"/>
+         <p class="button-hint">Klik op de knop en laat je verrassen.</p>
          <div class="outcomebox">
          <p id="recept" class="outcome"></p>
          </div>
@@ -23,7 +37,8 @@
                   "<a href='recepten/broccoli-zalm-avo/'>Broccoli bowl met zalm en avocado</a>",
                   "<a href='recepten/chili-sin-carne/'>Chili sin carne</a>",
                   "<a href='recepten/courgetti-pasta-zalm/'>Courgetti pasta met zalm</a>",
-                  "<a href='recepten/couscous-feta/'>Couscous met feta en groenten",
+                  "<a href='recepten/couscous-feta/'>Couscous met feta en groenten</a>",
+                  "<a href='recepten/couscous-geroosterde-groenten-hot-honey-halloumi/'>Couscous met geroosterde groenten en hot honey halloumi</a>",
                   "<a href='recepten/curry-mango-zoete-aardappel/'>Curry met mango en zoete aardappel</a>",
                   "<a href='recepten/dahl-curry/'>Dahl curry met spinazie</a>",
                   "<a href='recepten/fajita-vega/'>Fajita bowl vega</a>",
@@ -31,9 +46,11 @@
                   "<a href='recepten/gado-gado/'>Gado gado</a>",
                   "<a href='recepten/gegrilde-aubergine/'>Gegrilde aubergine</a>",
                   "<a href='recepten/gnocchi-tomaat-mozzarella/'>Gnocchi met cherrytomaten en mozzarella</a>",
+                  "<a href='recepten/gnocchi-doperwtenpesto-burrata/'>Gnocchi met doperwtenpesto en burrata</a>",
                   "<a href='recepten/halloumi-burger/'>Halloumi burger</a>",
                   "<a href='recepten/massaman-curry/'>Massaman curry</a>",
                   "<a href='recepten/noedels-broccoli-champignons/'>Noedels met broccoli en champignons</a>",
+                  "<a href='recepten/noedels-groente-ketjaptempeh/'>Noedels met groenten en krokante ketjaptempeh</a>",
                   "<a href='recepten/orzo-garnalen-feta/'>Orzo met garnalen, venkel en feta</a>",
                   "<a href='recepten/pad-thai/'>Pad thai</a>",
                   "<a href='recepten/pasta-artisjok-doperwten/'>Pasta met artisjok en doperwten</a>",
@@ -61,7 +78,8 @@
       </div>
       <section class="recipe-slider" aria-labelledby="recipe-slider-title">
          <div class="recipe-slider-header">
-            <p class="kieszelf" id="recipe-slider-title">Kies zelf een recept</p>
+         <div><p class="eyebrow">UIT DE KEUKEN VAN KEL</p><p class="kieszelf" id="recipe-slider-title">Waar heb je zin in?</p></div>
+         <label class="search-wrap"><span class="visually-hidden">Zoek een recept</span><input id="recipeSearch" type="search" placeholder="Zoek een recept" autocomplete="off"></label>
          </div>
          <ul class="recipe-grid">
             <li><a href="recepten/aardbei-manchego-salade/" title="Aardbei manchego salade">Aardbei manchego salade</a></li>
@@ -72,6 +90,7 @@
             <li><a href="recepten/chili-sin-carne/" title="Chili sin carne">Chili sin carne</a></li>
             <li><a href="recepten/courgetti-pasta-zalm/" title="Courgetti pasta met zalm">Courgetti pasta met zalm</a></li>
             <li><a href="recepten/couscous-feta/" title="Couscous met feta en groenten">Couscous met feta en groenten</a></li>
+            <li><a href="recepten/couscous-geroosterde-groenten-hot-honey-halloumi/" title="Couscous met geroosterde groenten en hot honey halloumi">Couscous met geroosterde groenten en hot honey halloumi</a></li>
             <li><a href="recepten/curry-mango-zoete-aardappel/" title="Curry met mango en zoete aardappel">Curry met mango en zoete aardappel</a></li>
             <li><a href="recepten/dahl-curry/" title="Dahl curry met spinazie">Dahl curry met spinazie</a></li>
             <li><a href="recepten/fajita-vega/" title="Fajita vega">Fajita bowl</a></li>
@@ -79,9 +98,11 @@
             <li><a href="recepten/gado-gado/" title="Gado gado">Gado gado</a></li>
             <li><a href="recepten/gegrilde-aubergine/" title="Gegrilde aubergine">Gegrilde aubergine</a></li>
             <li><a href="recepten/gnocchi-tomaat-mozzarella/" title="Gnocchi met cherrytomaten en mozzarella">Gnocchi met cherrytomaten en mozzarella</a></li>
+            <li><a href="recepten/gnocchi-doperwtenpesto-burrata/" title="Gnocchi met doperwtenpesto en burrata">Gnocchi met doperwtenpesto en burrata</a></li>
             <li><a href="recepten/halloumi-burger/" title="Halloumi burger">Halloumi burger</a></li>
             <li><a href="recepten/massaman-curry/" title="Massaman curry">Massaman curry</a></li>
             <li><a href="recepten/noedels-broccoli-champignons/" title="Noedels met broccoli en champignons">Noedels met broccoli en champignons</a></li>
+            <li><a href="recepten/noedels-groente-ketjaptempeh/" title="Noedels met groenten en krokante ketjaptempeh">Noedels met groenten en krokante ketjaptempeh</a></li>
             <li><a href="recepten/orzo-garnalen-feta/" title="Orzo met garnalen, venkel en feta">Orzo met garnalen, venkel en feta</a></li>
             <li><a href="recepten/pad-thai/" title="Pad thai">Pad thai</a></li>
             <li><a href="recepten/pasta-artisjok-doperwten/" title="Pasta met artisjok en doperwten">Pasta met artisjok en doperwten</a></li>
@@ -106,30 +127,14 @@
       <script>
          document.querySelectorAll('.recipe-grid a').forEach(function(link) {
             var label = link.textContent.trim();
-            var slug = link.getAttribute('href').replace('recepten/', '').replace('/', '');
-            var words = label.split(/\s+/);
-            var title = document.createElement('span');
+            link.closest('li').dataset.search = label.toLocaleLowerCase('nl');
+         });
 
-            if (words.length > 1) {
-               var splitAt = Math.ceil(words.length / 2);
-               title.innerHTML = words.slice(0, splitAt).join(' ') + '<br>' + words.slice(splitAt).join(' ');
-            } else {
-               title.textContent = label;
-            }
-
-            title.className = 'recipe-title';
-            link.textContent = '';
-            link.appendChild(title);
-
-            if (slug !== 'springrolls') {
-               var image = document.createElement('img');
-               image.className = 'recipe-image';
-               image.src = '/assets/recipes/' + slug + '.png';
-               image.alt = label;
-               image.width = 72;
-               image.height = 72;
-               link.appendChild(image);
-            }
+         document.getElementById('recipeSearch').addEventListener('input', function(event) {
+            var query = event.target.value.trim().toLocaleLowerCase('nl');
+            document.querySelectorAll('.recipe-grid li').forEach(function(card) {
+               card.hidden = !card.dataset.search.includes(query);
+            });
          });
 
       </script>
