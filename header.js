@@ -25,11 +25,16 @@ if (!hasStylesheet) {
   document.head.append(meta);
 });
 
-const favicon = document.createElement('link');
-favicon.rel = 'icon';
-favicon.type = 'image/png';
-favicon.href = '/logo.png';
-document.head.append(favicon);
+const hasFavicon = Array.from(document.querySelectorAll("link")).some(link =>
+  link.rel === "icon"
+);
+if (!hasFavicon) {
+  const favicon = document.createElement("link");
+  favicon.rel = "icon";
+  favicon.type = "image/svg+xml";
+  favicon.href = "/favicon.svg";
+  document.head.append(favicon);
+}
 
 const header = document.createElement('header');
 header.innerHTML = `
