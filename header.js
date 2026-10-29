@@ -1,3 +1,4 @@
+// The homepage includes this stylesheet in its head; keep this fallback for recipe pages.
 const hasStylesheet = Array.from(document.querySelectorAll("link")).some(link =>
   link.rel === "stylesheet" && link.getAttribute("href") === "/style.css"
 );
