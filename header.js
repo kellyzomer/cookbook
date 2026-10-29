@@ -22,7 +22,7 @@ if (!hasFavicon) {
   const favicon = document.createElement("link");
   favicon.rel = "icon";
   favicon.type = "image/svg+xml";
-  favicon.href = "/favicon.svg";
+  favicon.href = "/favicon.svg?v=20261029-k-center";
   document.head.append(favicon);
 }
 

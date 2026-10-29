@@ -41,9 +41,9 @@ header {
 .eyebrow { color: var(--aubergine); font-size: 11px; font-weight: 700; letter-spacing: .16em; margin: 0 0 10px; }
 h1, h2, .kieszelf { font-family: 'Playfair Display', Georgia, serif; }
 h1 { color: var(--green); font-size: clamp(48px, 8vw, 76px); font-weight: 500; letter-spacing: -.055em; line-height: 1.03; margin: 0 0 22px; }
-.typewriter { animation: typewriter 2.1s steps(18, end) .25s forwards, caret .8s step-end 2.35s infinite; border-right: 2px solid var(--green); display: inline-block; overflow: hidden; vertical-align: bottom; white-space: nowrap; width: 0; }
+.typewriter { animation: typewriter 2.1s steps(18, end) .25s forwards, caret .8s steps(1, end) 2.35s 3 forwards; border-right: 2px solid var(--green); display: inline-block; overflow: hidden; vertical-align: bottom; white-space: nowrap; width: 0; }
 @keyframes typewriter { to { width: 18ch; } }
-@keyframes caret { 50% { border-color: transparent; } }
+@keyframes caret { 0%, 49% { border-color: var(--green); } 50%, 100% { border-color: transparent; } }
 .intro > p:last-child { color: var(--muted); font-size: 15px; line-height: 1.5; margin: 0 auto; max-width: 510px; text-wrap: pretty; }
 .about-card {
   align-items: center; background: var(--aubergine); border-radius: 26px; color: #fffaf7;
