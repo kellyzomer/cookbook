@@ -1,7 +1,12 @@
-const stylesheet = document.createElement('link');
-stylesheet.rel = 'stylesheet';
-stylesheet.href = '/style.css';
-document.head.append(stylesheet);
+const hasStylesheet = Array.from(document.querySelectorAll("link")).some(link =>
+  link.rel === "stylesheet" && link.getAttribute("href") === "/style.css"
+);
+if (!hasStylesheet) {
+  const stylesheet = document.createElement("link");
+  stylesheet.rel = "stylesheet";
+  stylesheet.href = "/style.css";
+  document.head.append(stylesheet);
+}
 
 [
   ['charset', 'utf-8'],
