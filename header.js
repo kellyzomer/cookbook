@@ -25,6 +25,7 @@ if (!hasStylesheet) {
   document.head.append(meta);
 });
 
+// Use the SVG brand mark on pages without a favicon link in their own head.
 const hasFavicon = Array.from(document.querySelectorAll("link")).some(link =>
   link.rel === "icon"
 );
